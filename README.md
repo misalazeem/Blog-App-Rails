@@ -2,9 +2,7 @@
   <h1>Blog App</h1>
 </div>
 
-
 <a name="readme-top"></a>
-
 
 <!-- TABLE OF CONTENTS -->
 
@@ -32,14 +30,13 @@
 
 > This is a blog app based on ruby on rails. This app will feature users, posts, comments, likes.
 
-
-
 ## 🛠 Built With <a name="built-with"></a>
-
+<h2> Tech Stack </h2>
 - Ruby on Rails
 - PSQL
 
 <!-- Features -->
+
 ### Key Features <a name="key-features"></a>
 
 - Display Users
@@ -77,6 +74,7 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone https://github.com/misalazeem/Blog-App-Rails.git
 ```
+
 ### Usage
 
 To run the project, execute the following command:
@@ -90,7 +88,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  
+  rails test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -111,7 +109,6 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Add GUI
- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +116,7 @@ To run tests, run the following command:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-  Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +124,7 @@ To run tests, run the following command:
 
 ## ⭐️ Show your support <a name="support"></a>
 
-  If you like this project, give it a star.
+If you like this project, give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,10 +132,9 @@ To run tests, run the following command:
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
- - Thanks to all Microverse community
+- Thanks to all Microverse community
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
