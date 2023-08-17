@@ -14,7 +14,12 @@ RSpec.describe Post, type: :model do
 
   it 'should not create post with a title longer than 250 characters' do
     post = Post.create(author: User.create(name: 'Misal', posts_counter: 0),
-                       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum neque vel nulla faucibus, in cursus elit vestibulum. Vestibulum venenatis libero eu risus tristique, vitae consequat justo dictum. Sed eget vestibulum nibh. Aenean ultricies ipsum eu libero tincidunt condimentum. Curabitur a ante ut odio placerat feugiat. Vivamus at efficitur sapien.')
+                       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                       Nullam fermentum neque vel nulla faucibus, in cursus elit vestibulum. 
+                       Vestibulum venenatis libero eu risus tristique, vitae consequat justo 
+                       dictum. Sed eget vestibulum nibh. Aenean ultricies 
+                       ipsum eu libero tincidunt condimentum. 
+                       Curabitur a ante ut odio placerat feugiat. Vivamus at efficitur sapien.')
     expect(post.valid?).to eq false
   end
 
