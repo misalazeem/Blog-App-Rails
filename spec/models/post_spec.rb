@@ -12,6 +12,12 @@ RSpec.describe Post, type: :model do
     expect(post.valid?).to eq false
   end
 
+  it 'should not create post with like/comment counter not an integer' do
+    post = Post.create(author: User.create(name: 'Misal', posts_counter: 0), title: 'First Post', comments_counter: 'Hi',
+                       likes_counter: 'Hi')
+    expect(post.valid?).to eq false
+  end
+
   it 'should create post with a title longer than 250 characters' do
     post = Post.create(author: User.create(name: 'Misal', posts_counter: 0),
                        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit')

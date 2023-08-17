@@ -16,6 +16,11 @@ RSpec.describe User, type: :model do
     expect(user.valid?).to eq false
   end
 
+  it 'should not save a user if post_counter is not an integer' do
+    user = User.new(name: 'Misal', posts_counter: 'Hi')
+    expect(user.valid?).to eq false
+  end
+
   it 'retrieves recent posts' do
     user = User.create(name: 'Misal', posts_counter: 0)
     expect(user.valid?).to eq true
