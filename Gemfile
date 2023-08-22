@@ -66,6 +66,13 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'rspec'
+
+gem 'rails-controller-testing'
+
+gem 'rubocop', '>= 1.0', '< 2.0'
