@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :find_user, only: [:show]
   rescue_from ActiveRecord::RecordNotFound, with: :user_not_found
-  
+
   def index
     @users = User.all
   end
@@ -17,8 +17,7 @@ class UsersController < ApplicationController
   end
 
   def user_not_found
-    flash[:alert] = "User not found"
+    flash[:alert] = 'User not found'
     redirect_to users_path
   end
-
 end

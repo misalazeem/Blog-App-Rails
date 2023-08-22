@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def post_not_found
-    flash[:alert] = "Post not found"
+    flash[:alert] = 'Post not found'
     redirect_to user_posts_path(@user)
   end
 end
