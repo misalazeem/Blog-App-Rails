@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'UsersController', type: :request do
   let!(:user) { User.create(name: 'Misal') }
-  
+
   describe 'GET /index' do
     before do
       get users_path
