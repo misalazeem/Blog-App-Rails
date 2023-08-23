@@ -1,0 +1,10 @@
+<div class = "user-details">
+  <div class= "username">
+    <%= user.name if user %>
+  </div>
+  <div class="user-post-count">
+    <% if user %>
+      <p>Number of posts: <%= user.posts_counter %></p>
+    <% end %>
+  </div>
+</div>
