@@ -70,6 +70,10 @@ a {
   border: 2px solid #000;
 }
 
+.user-photo img {
+  width: 100%;
+}
+
 .user-bio {
   display: flex;
   flex-direction: column;

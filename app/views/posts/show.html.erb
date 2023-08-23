@@ -9,7 +9,7 @@
   <p><%= @post.text %></p>
 </div>
 <div class="comment-box">
-  <% @post.recent_five.each do |comment| %>
+  <% @post.comments.each do |comment| %>
     <div class="each-commet">
       <span><%= comment.author.name %>: </span>
       <span><%= comment.text %></span>
