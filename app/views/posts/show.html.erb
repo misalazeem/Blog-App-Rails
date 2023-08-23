@@ -1,2 +1,22 @@
-<h1>Post ID <%= @post.id %> of User <%= @user.name %></h1>
-<li><%= @post.title %></li>
+<div class="individual-post-container">
+  <div class="post-top-bar">
+    <h2>Post <%= "#" + @post.id.to_s %> by <%= @user.name %></h2>
+        <div class="post-comments-likes">
+          <span>Comments: <%= @post.comments_counter %>, </span>
+          <span>Likes: <%= @post.likes_counter %></span>
+        </div>
+  </div>
+  <p><%= @post.text %></p>
+</div>
+<div class="comment-box">
+  <% @post.comments.each do |comment| %>
+    <div class="each-commet">
+      <span><%= comment.author.name %>: </span>
+      <span><%= comment.text %></span>
+    </div>
+  <% end %>
+</div>
+
+<a href="<%= user_posts_path() %>">
+  Go back
+</a>

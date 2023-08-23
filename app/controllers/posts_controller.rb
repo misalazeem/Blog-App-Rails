@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_user
+  before_action :find_user, only: %i[index show]
+  before_action :find_post, only: [:show]
 
   rescue_from ActiveRecord::RecordNotFound, with: :post_not_found
 
@@ -13,8 +14,12 @@ class PostsController < ApplicationController
 
   private
 
-  def set_user
+  def find_user
     @user = User.find(params[:user_id])
+  end
+
+  def find_post
+    @post = @user.posts.find(params[:id])
   end
 
   def post_not_found
