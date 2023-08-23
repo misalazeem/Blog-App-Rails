@@ -1,20 +1,10 @@
-<h1>List of Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Posts Counter</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.id %></td>
-        <td><%= user.name %></td>
-        <td><%= user.posts_counter %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="users-container">
+  <% @users.each do |user| %>
+    <div class="user-box">
+      <a href="<%= user_path(user) %>">      
+        <%= render partial: 'shared/user_photo', locals: { user: user } %>
+        <%= render partial: 'shared/user_details', locals: { user: user } %>
+      </a>
+    </div>
+  <% end %>
+</div>

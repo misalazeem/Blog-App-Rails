@@ -7,13 +7,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @three_recent_posts = @user.recent_three
   end
 
   def new; end
 
   def find_user
-    @users = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def user_not_found

@@ -1,1 +1,28 @@
-<h1><%= @user.name %></h1>
+<div class="user-box">   
+    <%= render partial: 'shared/user_photo', locals: { user: @user } %>
+    <%= render partial: 'shared/user_details', locals: { user: @user } %>
+</div>
+
+<div class="user-bio">
+  <h3>Bio</h3>
+  <p><%= @user.bio %></p>
+</div>
+
+<% @three_recent_posts.each do |post| %>
+  <div class="each-post">
+    <h3>Post <%= raw "#" + post.id.to_s %></h3>
+    <p><%= post.text %></p>
+    <div class="post-comments-likes">
+      <span>Comments: <%= post.comments_counter %>, </span>
+      <span>Likes: <%= post.likes_counter %></span>
+    </div>
+  </div>
+<% end %>
+
+<a href="<%= user_posts_path(@user) %>" class="see-all-posts">
+  <button>See All Posts</button>
+</a>
+
+<a href="<%= users_path(@user) %>">
+  Go back
+</a>
