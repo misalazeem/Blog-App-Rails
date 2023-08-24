@@ -31,6 +31,7 @@
 > This is a blog app based on ruby on rails. This app will feature users, posts, comments, likes.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 <h2> Tech Stack </h2>
 - Ruby on Rails
 - PSQL
@@ -73,6 +74,14 @@ Clone this repository to your desired folder:
 ```sh
   cd my-folder
   git clone https://github.com/misalazeem/Blog-App-Rails.git
+```
+
+### Install
+
+To install dependencies Run the following commands:
+
+```sh
+  bundle install
 ```
 
 ### Usage

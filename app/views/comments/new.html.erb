@@ -1,0 +1,13 @@
+<%= form_with model: @comment, url: user_post_comments_path do |form| %>
+  <div class="form">
+    <div class="form-row">
+    <%= form.label :Add_a_comment  %>
+    <%= form.text_area :text %>
+    </div>
+    <%= form.submit %>
+  </div>
+<%end%>
+
+<a href="<%= user_posts_path() %>">
+  Go back
+</a>

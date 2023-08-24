@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "users#index"
   resources :users do
-    resources :posts
+    resources :posts do
+      member do
+        post 'like'
+        delete 'unlike'
+      end
+      resources :comments
+    end
   end
 end
