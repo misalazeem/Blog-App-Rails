@@ -28,8 +28,8 @@
   </a>
 <% end %>
 
-<a href="<%= users_path() %>" class="see-all-posts">
-  <button>Pagination</button>
+<a href="<%= new_user_post_path(@user, @post) %>" class="see-all-posts">
+  <button>Create a New Post</button>
 </a>
 
 <a href="<%= user_path(@user) %>">

@@ -6,6 +6,12 @@
           <span>Likes: <%= @post.likes_counter %></span>
         </div>
   </div>
+  <% if current_user.present? %>
+  <div class="like-post">
+    <%= button_to "Like", like_user_post_path(@user, @post), method: :post, remote: true %>
+    <%= button_to "Unlike", unlike_user_post_path(@user, @post), method: :delete, remote: true %>
+  </div>
+  <% end %>
   <p><%= @post.text %></p>
 </div>
 <div class="comment-box">
@@ -16,7 +22,11 @@
     </div>
   <% end %>
 </div>
-
+<div class="add-comment">
+  <a href="<%= new_user_post_comment_path(@user, @post) %>">
+    <button class="add-comment-button">Add a comment</button>
+  </a>
+</div>
 <a href="<%= user_posts_path() %>">
   Go back
 </a>

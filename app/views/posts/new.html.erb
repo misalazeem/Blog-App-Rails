@@ -1,0 +1,18 @@
+<h2>Create a Post</h2>
+<div class="form">
+<%= form_with model: @post, url: user_posts_path do |form| %>
+  <div class="form-row">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="form-row">
+    <%= form.label :Write_your_post %>
+    <%= form.text_area :text%>
+  </div>
+  <%= form.submit "Create post", disable_with: 'Submiting...' %>
+<% end %>
+</div>
+
+<a href="<%= user_posts_path() %>">
+  Go back
+</a>
