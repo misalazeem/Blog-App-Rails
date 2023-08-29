@@ -10,7 +10,7 @@
 
 <% @three_recent_posts.each do |post| %>
   <div class="each-post">
-    <h3>Post <%= raw "#" + post.id.to_s %></h3>
+    <h3><%= post.title %></h3>
     <p><%= post.text %></p>
     <div class="post-comments-likes">
       <span>Comments: <%= post.comments_counter %>, </span>
