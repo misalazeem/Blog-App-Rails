@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'User Show', type: :feature do
   let(:user) { User.create(name: 'Tom', photo: 'https://media.gcflearnfree.org/ctassets/topics/246/share_size_large.jpg', bio: 'Tom is from Spain') }
   let!(:post1) { Post.create(author: user, title: 'first post', text: 'This is the first post') }
@@ -18,8 +19,9 @@ RSpec.feature 'User Show', type: :feature do
   scenario 'User Show Page bio, Displaying Recent 3 posts' do
     visit user_path(user)
     expect(page).to have_content('Tom is from Spain')
-    expect(page).to all(have_content('This is the forth post'), have_content('This is the third post'),
-                        have_content('This is the second post'))
+    expect(page).to have_content('This is the forth post')
+    expect(page).to have_content('This is the third post')
+    expect(page).to have_content('This is the second post')
   end
   scenario 'There is a See All posts button' do
     visit user_path(user)
@@ -33,3 +35,4 @@ RSpec.feature 'User Show', type: :feature do
     expect(current_path).to eq(user_post_path(user, post2))
   end
 end
+# rubocop:enable Metrics/BlockLength
