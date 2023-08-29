@@ -18,9 +18,8 @@ RSpec.feature 'User Show', type: :feature do
   scenario 'User Show Page bio, Displaying Recent 3 posts' do
     visit user_path(user)
     expect(page).to have_content('Tom is from Spain')
-    expect(page).to have_content('This is the forth post')
-    expect(page).to have_content('This is the third post')
-    expect(page).to have_content('This is the second post')
+    expect(page).to all(have_content('This is the forth post'), have_content('This is the third post'),
+                        have_content('This is the second post'))
   end
   scenario 'There is a See All posts button' do
     visit user_path(user)
