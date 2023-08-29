@@ -9,7 +9,7 @@
   <a href="<%= user_post_path(@user, post) %>">
     <div class="user-post">
       <div class="each-post">
-        <h3>Post <%= raw "#" + post.id.to_s %></h3>
+        <h3><%= post.title %></h3>
         <p><%= post.text %></p>
         <div class="post-comments-likes">
           <span>Comments: <%= post.comments_counter %>, </span>
@@ -31,7 +31,9 @@
 <a href="<%= new_user_post_path(@user, @post) %>" class="see-all-posts">
   <button>Create a New Post</button>
 </a>
-
+<section id="pagination">
+  <button>Pagination</button>
+</section>
 <a href="<%= user_path(@user) %>">
   Go back
 </a>

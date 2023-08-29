@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :post_not_found
 
   def index
-    @posts = @user.posts
+    @posts = @user.posts.includes(:author)
+    @posts = @user.posts.includes(:comments)
   end
 
   def new
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = @user.posts.find(params[:id])
+    @post = @user.posts.includes(:author, :comments, :likes).find(params[:id])
   end
 
   private
