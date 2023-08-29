@@ -18,6 +18,21 @@ RSpec.feature 'User Show', type: :feature do
   scenario 'User Show Page, Displaying Recent 3 posts' do
     visit user_path(user)
     expect(page).to have_content('Tom is from Spain')
-    expect(page).not_to have_content('fist text')
+    expect(page).to have_content('This is the forth post')
+    expect(page).to have_content('This is the third post')
+    expect(page).to have_content('This is the second post')
+  end
+
+  scenario 'There is a See All posts button' do
+    visit user_path(user)
+    expect(page).to have_button('See All Posts')
+    click_link 'See All Posts'
+    expect(current_path).to eq(user_posts_path(user))
+  end
+
+  scenario 'When I click a users post, it redirects me to that posts show page.' do
+    visit user_path(user)
+    click_link 'This is the second post'
+    expect(current_path).to eq(user_post_path(user, post2))
   end
 end

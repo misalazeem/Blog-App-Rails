@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = @user.posts.includes(:author)
+    @posts = @user.posts.includes(:comments)
   end
 
   def new

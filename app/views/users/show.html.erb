@@ -9,6 +9,7 @@
 </div>
 
 <% @three_recent_posts.each do |post| %>
+<a href="<%= user_post_path(@user, post) %>">
   <div class="each-post">
     <h3><%= post.title %></h3>
     <p><%= post.text %></p>
@@ -17,6 +18,7 @@
       <span>Likes: <%= post.likes_counter %></span>
     </div>
   </div>
+</a>
 <% end %>
 
 <a href="<%= user_posts_path(@user) %>" class="see-all-posts">
