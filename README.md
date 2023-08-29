@@ -111,6 +111,12 @@ To run tests, run the following command:
 - GitHub: [@misalazeem](https://github.com/misalazeem)
 <!-- - LinkedIn: [username](link) -->
 
+### 👤 **Chere Lemma**
+
+- GitHub: [@cherelemma](https://github.com/cherelemma)
+- LinkedIn: [@chere-lemma27211613](https://www.linkedin.com/in/chere-lemma27211613)
+- Twitter: [@twitterhandle](https://twitter.com/Chere21271613)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
