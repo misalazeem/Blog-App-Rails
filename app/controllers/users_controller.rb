@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   before_action :find_user, only: [:show]
   rescue_from ActiveRecord::RecordNotFound, with: :user_not_found
 
@@ -7,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @three_recent_posts = @user.recent_three
+    @three_recent_posts = @user.recent_three unless @user.nil?
   end
 
   def new; end
