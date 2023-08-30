@@ -26,13 +26,13 @@ body {
   font-size: 18px;
 }
 
-.nav a {
-  margin-right: 20px;
-}
-
 a {
   text-decoration: none;
   color: #000;
+}
+
+.nav a {
+  margin-right: 20px;
 }
 
 .users-container {
