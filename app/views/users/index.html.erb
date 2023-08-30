@@ -1,10 +1,15 @@
 <div class="users-container">
-  <% @users.each do |user| %>
-    <div class="user-box">
-      <a href="<%= user_path(user) %>">      
-        <%= render partial: 'shared/user_photo', locals: { user: user } %>
-        <%= render partial: 'shared/user_details', locals: { user: user } %>
+  <% unless @users.nil? %>
+    <% @users.each do |user| %>
+      <a href="<%= user_posts_path(user) %>">
+        <div class="user-box">
+          <%= render partial: 'shared/user_details', locals: { user: user } %>
+        </div>
       </a>
-    </div>
+    <% end %>
+  <% else %>
+    <p>Please sign in or sign up to view user details.</p>
+    <%= link_to 'Sign In', new_user_session_path %>
+    <%= link_to 'Sign Up', new_user_registration_path %>
   <% end %>
 </div>
